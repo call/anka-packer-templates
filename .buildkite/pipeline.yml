@@ -1,12 +1,18 @@
+agent_queue: &agent_queue "queue=iron-shark"
+
 steps:
 - label: Build 10.15.2 Vanilla 
   command: 
     - "source ~/.bash_profile"
     - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer && packer build macos-vanilla-10.15.json; fi"
+  agents:
+    - *agent_queue
 - label: Build 10.15.2 CI
   command:
     - "source ~/.bash_profile"
     - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer && packer build macos-ci-10.15.json; fi"
+  agents:
+    - *agent_queue
 - label: Anka Flow CI Job
   command:
     - "whoami"
@@ -14,6 +20,8 @@ steps:
     - "env"
     - "export PATH=/usr/local/bin:$PATH"
     - "/usr/local/bin/brew list"
+  agents:
+    - *agent_queue
   plugins:
     - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
         source_vm_name: macos-ci-10.15
