@@ -1,10 +1,14 @@
 {
   "builders": [
     {
+      "boot_delay": "15s",
+      "cpu_count": "{{user `cpu_count`}}",
+      "disk_size": "{{user `disk_size`}}",
+      "installer_app": "/Applications/Install macOS Catalina.app/",
+      "ram_size": "{{user `ram_size`}}",
+      "source_vm_name": "{{user `source_vm_name`}}",
       "type": "veertu-anka",
-      "vm_name": "{{ user `vm_name` }}",
-      "source_vm_name":  "{{user `source_vm_name`}}",
-      "boot_delay": "15s"
+      "vm_name": "{{ user `vm_name` }}"
     }
   ],
   "provisioners": [
@@ -21,10 +25,13 @@
     }
   ],
   "variables": {
-    "vm_name": "macos-xcode-10.15",
-    "source_vm_name": "macos-ci-10.15",
-    "xcode_version": "11.3",
+    "cpu_count": "4",
+    "disk_size": "60G",
+    "fastlane_password": "{{env `FASTLANE_PASSWORD`}}",
     "fastlane_user": "{{env `FASTLANE_USER`}}",
-    "fastlane_password": "{{env `FASTLANE_PASSWORD`}}"
+    "ram_size": "16G",
+    "source_vm_name": "macos-ci-10.15",
+    "vm_name": "macos-xcode-10.15",
+    "xcode_version": "11.3"
   }
 }
