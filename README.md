@@ -18,7 +18,7 @@ Packer templates for building Veertu Anka virtual machine images.
    ```
 5. Install [Packer Builder for Anka](https://github.com/veertuinc/packer-builder-veertu-anka)
 6. Ensure you have the macOS Catalina installer locally at `/Applications/Install macOS Catalina.app`
-7. To build the xcode image, ensure `$FASTLANE_USER` and `$FASTLANE_PASSWORD` are set in your local dev environment. [Fastlane](https://github.com/fastlane/fastlane) uses Apple Developer credentials to fetch Xcode from developer.apple.com.
+7. To build the Xcode image, ensure `$FASTLANE_USER` and `$FASTLANE_PASSWORD` are set in your local dev environment. [Fastlane](https://github.com/fastlane/fastlane) uses Apple Developer credentials to fetch Xcode from developer.apple.com.
    ```
    export FASTLANE_USER=johnny@appleseed.com && export FASTLANE_PASSWORD=p@$$WorD
    ```
@@ -31,7 +31,7 @@ VPN software is known to interfere with VM interaction; please disable it before
 
 To build all images
 
-###### :warning: Takes 60-90 minutes!
+##### :warning: Requires 100GB free and takes 60-90 minutes!
 ```
 packer build macos-vanilla-10.15.json && \
   packer build macos-ci-10.15.json && \
