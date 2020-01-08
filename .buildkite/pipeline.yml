@@ -1,8 +1,12 @@
 steps:
 - label: Build 10.15.2 Vanilla 
-  command: "source ~/.bash_profile && cd packer && packer build macos-vanilla-10.15.json && cd -"
+  command: 
+    - "source ~/.bash_profile"
+    - "cd packer && packer build macos-vanilla-10.15.json"
 - label: Build 10.15.2 CI
-  command: "source ~/.bash_profile && cd packer && packer build macos-ci-10.15.json && cd -"
+  command:
+    - "source ~/.bash_profile"
+    - "cd packer && packer build macos-ci-10.15.json"
 # - block: ":rocket: Takeoff!"
 # - label: Get oriented
 #   command: "pwd"
