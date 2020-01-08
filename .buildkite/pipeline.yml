@@ -25,4 +25,4 @@ steps:
   plugins:
     - chef/anka#v0.5.6:
         vm-name: macos-ci-10.15
-        wait-network: false
+        wait-network: true
