@@ -1,28 +1,6 @@
 steps:
-- label: Build 10.15.2 Vanilla 
-  command: 
-    - "source ~/.bash_profile"
-    - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer && packer build macos-vanilla-10.15.json; fi"
-  agents:
-    queue: water-monkey
-- label: Build 10.15.2 CI
+- label: Basic Test
   command:
-    - "source ~/.bash_profile"
-    - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer && packer build macos-ci-10.15.json; fi"
-  agents:
-    queue: water-monkey
-- label: Anka Flow CI Job
-  command:
-    - "whoami"
-    - "pwd"
-    - "env"
-    - "export PATH=/usr/local/bin:$PATH"
     - "/usr/local/bin/brew list"
   agents:
     queue: water-monkey
-  plugins:
-    - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
-        source_vm_name: macos-ci-10.15
-#     - chef/anka#v0.5.6:
-#         vm-name: macos-ci-10.15
-#         wait-network: false
