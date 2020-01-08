@@ -14,5 +14,5 @@ steps:
     - "env"
     - "brew list"
   plugins:
-    - https://github.com/call/anka-flow-buildkite-plugin.git:v0.0.3:
+    - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
         source_vm_name: macos-ci-10.15
