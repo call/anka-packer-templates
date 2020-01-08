@@ -23,6 +23,6 @@ steps:
   agents:
     queue: *agent_queue
   plugins:
-    - chef/anka#v0.5.6::
+    - chef/anka#v0.5.5::
         vm-name: macos-ci-10.15
         wait-network: true
