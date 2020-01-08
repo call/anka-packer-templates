@@ -13,7 +13,7 @@ steps:
     - "pwd"
     - "env"
     - "export PATH=/usr/local/bin:$PATH"
-    - "brew list"
+    - "/usr/local/bin/brew list"
   plugins:
     - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
         source_vm_name: macos-ci-10.15
