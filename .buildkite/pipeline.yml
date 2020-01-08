@@ -2,11 +2,11 @@ steps:
 - label: Build 10.15.2 Vanilla 
   command: 
     - "source ~/.bash_profile"
-    - "if [[ ! $(/usr/local/bin/anka show macos-vanilla-10.15) ]]; then cd packer && packer build macos-vanilla-10.15.json; fi"
+    - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer && packer build macos-vanilla-10.15.json; fi"
 - label: Build 10.15.2 CI
   command:
     - "source ~/.bash_profile"
-    - "if [[ ! $(/usr/local/bin/anka show macos-ci-10.15) ]]; then cd packer && packer build macos-ci-10.15.json; fi"
+    - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer && packer build macos-ci-10.15.json; fi"
 
 # - block: ":rocket: Takeoff!"
 # - label: Get oriented
