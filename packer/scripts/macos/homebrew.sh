@@ -1,12 +1,12 @@
 #!/bin/bash
 set -eu
 
-# Make homebrew bin dir first in $PATH
+# Make Homebrew bin dir first in $PATH
 echo "export PATH=/usr/local/bin:$PATH" >> ~/.bash_profile
 echo "export PATH=/usr/local/bin:$PATH" >> ~/.zshenv
 source ~/.bash_profile
 
-# Manually install xcode dev tools, it fails sometimes in the homebrew installer
+# Manually install Xcode CLI tools, it fails sometimes in the Homebrew installer
 touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
 
 # This one-liner brought to you by the Homebrew install script

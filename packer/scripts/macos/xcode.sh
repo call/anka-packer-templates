@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Unset variable $ZSH_VERSION in asdf.sh makes `set -u` here fail
+# Note: unset variable "$ZSH_VERSION" in asdf.sh breaks `set -u`
 set -eo pipefail
 source ~/.bash_profile
 

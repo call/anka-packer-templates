@@ -1,9 +1,9 @@
 # anka-packer-templates
 
-Packer templates for building Veertu Anka virtual machine images.
+Hashicorp [Packer](https://www.packer.io/) templates for building Veertu [Anka](https://veertu.com/technology/) virtual machine images.
 
 ## Requirements
-1. Install [`asdf`](https://github.com/asdf-vm/asdf) for tool version management (Recommended but not required)
+1. [Install `asdf`](https://github.com/asdf-vm/asdf) for tool version management (Recommended)
 2. Install Veertu Anka Flow
    ```
    brew install anka-flow
