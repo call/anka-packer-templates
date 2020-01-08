@@ -16,7 +16,7 @@ PROD=$(/usr/sbin/softwareupdate -l |
   sed -e 's/^ *Label: //' -e 's/^ *//' |
   sort -V |
   tail -n1)
-softwareupdate -i "$PROD";
+softwareupdate -i "${PROD}";
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
