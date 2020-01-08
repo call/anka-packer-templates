@@ -22,6 +22,7 @@ steps:
 #     queue: iron-shark
   plugins:
     - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
+      source_vm_name: macos-ci-10.15
 #     - chef/anka#v0.5.6:
-        vm-name: macos-ci-10.15
-        wait-network: false
+#         vm-name: macos-ci-10.15
+#         wait-network: false
