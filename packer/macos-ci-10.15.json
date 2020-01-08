@@ -8,7 +8,7 @@
       "cpu_count": "{{user `cpu_count`}}",
       "source_vm_name": "{{user `source_vm_name`}}",
       "vm_name": "{{ user `vm_name` }}",
-      "boot_delay": "15s"
+      "boot_delay": "20s"
     }
   ],
   "provisioners": [
