@@ -38,9 +38,9 @@ VPN software is known to interfere with VM interaction; please disable it before
 
 - To build the general CI image (Uses Vanilla as base):
 
-  ##### :warning: Requires 30GB free disk space and takes ~30 minutes!
+  ##### :warning: Requires 30GB free disk space and takes ~15 minutes!
   ```
-  packer build macos-vanilla-10.15.json
+  packer build macos-ci-10.15.json
   ```
 
 - To build the Xcode image (Uses CI as base):
