@@ -29,11 +29,23 @@ VPN software is known to interfere with VM interaction; please disable it before
 
 ## Build
 
-To build all images
+All images are based on a vanilla image, which must be build first
 
-##### :warning: Requires 100GB free and takes 60-90 minutes!
+##### :warning: Requires 30GB free disk space and takes ~30 minutes!
 ```
-packer build macos-vanilla-10.15.json && \
-  packer build macos-ci-10.15.json && \
-  packer build macos-xcode-10.15.json
+packer build macos-vanilla-10.15.json
+```
+
+To build the general CI image
+
+##### :warning: Requires 30GB free disk space and takes ~30 minutes!
+```
+packer build macos-vanilla-10.15.json
+```
+
+To build the Xcode image
+
+##### :warning: Requires 40GB free disk space and takes ~45 minutes!
+```
+packer build macos-xcode-10.15.json
 ```
