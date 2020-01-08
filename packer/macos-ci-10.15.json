@@ -8,7 +8,7 @@
       "cpu_count": "{{user `cpu_count`}}",
       "source_vm_name": "{{user `source_vm_name`}}",
       "vm_name": "{{ user `vm_name` }}",
-      "boot_delay": "{{ user `boot_delay` }}"
+      "boot_delay": "15s"
     }
   ],
   "provisioners": [
@@ -25,7 +25,6 @@
     "ram_size": "8G",
     "cpu_count": "2",
     "source_vm_name": "macos-vanilla-10.15",
-    "vm_name": "macos-ci-10.15",
-    "boot_delay": "20s"
+    "vm_name": "macos-ci-10.15"
   }
 }
