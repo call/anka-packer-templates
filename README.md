@@ -29,7 +29,7 @@ VPN software is known to interfere with VM interaction; please disable it before
 
 ## Build
 
-To run `packer build` commands, `cd` to the `packer/` directory in this repository.
+To run `packer build` commands, first `cd` to the `packer/` directory in this repository.
 
 - All images are ultimately based on a vanilla image, which must be build first:
 
