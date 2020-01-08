@@ -1,0 +1,31 @@
+{
+  "builders": [
+    {
+      "type": "veertu-anka",
+      "installer_app": "/Applications/Install macOS Catalina.app/",
+      "disk_size": "{{user `disk_size`}}",
+      "ram_size": "{{user `ram_size`}}",
+      "cpu_count": "{{user `cpu_count`}}",
+      "source_vm_name": "{{user `source_vm_name`}}",
+      "vm_name": "{{ user `vm_name` }}",
+      "boot_delay": "{{ user `boot_delay` }}"
+    }
+  ],
+  "provisioners": [
+    {
+      "scripts": [
+        "scripts/macos/homebrew.sh",
+        "scripts/macos/asdf.sh"
+      ],
+      "type": "shell"
+    }
+  ],
+  "variables": {
+    "disk_size": "40G",
+    "ram_size": "8G",
+    "cpu_count": "2",
+    "source_vm_name": "macos-vanilla-10.15",
+    "vm_name": "macos-ci-10.15",
+    "boot_delay": "20s"
+  }
+}
