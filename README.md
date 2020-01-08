@@ -6,7 +6,7 @@ Hashicorp [Packer](https://www.packer.io/) templates for building Veertu [Anka](
 1. [Install `asdf`](https://github.com/asdf-vm/asdf) for tool version management (Recommended)
 2. Install Veertu Anka Flow
    ```
-   brew install anka-flow
+   brew cask install anka-flow
    ```
 3. License Anka Flow
    ```
