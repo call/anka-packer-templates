@@ -7,18 +7,12 @@ steps:
   command:
     - "source ~/.bash_profile"
     - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer && packer build macos-ci-10.15.json; fi"
-
-# - block: ":rocket: Takeoff!"
-# - label: Get oriented
-#   command: "pwd"
-# - label: Build anka
-#   command: "ping -c 2 google.com"
-# - label: Run commands in Anka Flow VM
-#   command:
-#     - "whoami"
-#     - "pwd"
-#     - "env"
-#     - "brew list"
-#   plugins:
-#     - https://github.com/call/anka-flow-buildkite-plugin.git:v0.0.2:
-#         clone_source_vm: macos-ci-10.15
+- label: Anka Flow CI Job
+  command:
+    - "whoami"
+    - "pwd"
+    - "env"
+    - "brew list"
+  plugins:
+    - https://github.com/call/anka-flow-buildkite-plugin.git:v0.0.2:
+        clone_source_vm: macos-ci-10.15
