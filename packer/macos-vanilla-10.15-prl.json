@@ -1,0 +1,26 @@
+{
+  "builders": [
+    {
+      "cpus": "{{user `cpus`}}",
+      "disk_size": "{{user `disk_size`}}",
+      "guest_os_type": "macosx",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_url": "{{user `iso_url`}}",
+      "memory": "{{user `memory`}}",
+      "parallels_tools_flavor": "mac",
+      "ssh_username": "packer",
+      "ssh_password": "packer",
+      "ssh_timeout": "30s",
+      "type": "parallels-iso",
+      "vm_name": "{{user `vm_name`}}"
+    }
+  ],
+  "variables": {
+    "cpus": "4",
+    "disk_size": "40000",
+    "iso_checksum": "12d443182619c7278a136b5eef17a7ac62abff1c",
+    "iso_url": "file:////Users/bcall/Downloads/Catalina.iso",
+    "memory": "16000",
+    "vm_name": "macos-vanilla-10.15-prl"
+  }
+}
