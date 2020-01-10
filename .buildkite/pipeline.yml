@@ -19,6 +19,9 @@ steps:
   - label: Anka Flow Ops Job
     command:
       - locale
+      - ls ~
+      - cat ~/.bash_profile
+      - cat ~/.zshrc
       - "which ruby"
       - "gem list"
       - "brew list"
