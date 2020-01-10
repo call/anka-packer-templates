@@ -5,5 +5,5 @@ package { 'serverspec':
 
 package { 'autopkgr':
   ensure   => 'present',
-  provider => 'homebrew',
+  provider => 'brewcask',
 }
