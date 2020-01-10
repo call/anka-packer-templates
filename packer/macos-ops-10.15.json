@@ -14,14 +14,14 @@
   "provisioners": [
     {
       "scripts": [
-        "scripts/macos/tools.sh"
+        "scripts/macos/puppet.sh"
       ],
       "type": "shell"
     },
     {
-      "manifest_file": "puppet/macos/test.pp",
+      "manifest_file": "puppet/macos/tools.pp",
       "type": "puppet-masterless",
-      "puppet_bin_dir": "/opt/puppetlabs/puppet/bin/puppet"
+      "puppet_bin_dir": "/opt/puppetlabs/puppet/bin/"
     }
   ],
   "variables": {
