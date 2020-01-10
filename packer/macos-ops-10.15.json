@@ -19,9 +19,7 @@
       "type": "shell"
     },
     {
-      "scripts": [
-        "puppet/macos/test.pp"
-      ],
+      "manifest_file": "puppet/macos/test.pp",
       "type": "puppet-masterless"
     }
   ],
