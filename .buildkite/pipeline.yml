@@ -19,6 +19,8 @@ steps:
       - *agent_queue
   - label: Anka Flow Ops Job
     command:
+      - whoami
+      - "echo $HOME"
       - locale
       - ls ~
       - cat ~/.bash_profile
