@@ -1,2 +1,2 @@
 brew tap puppetlabs/puppet
-brew install puppet-agent-6
+brew cask install puppet-agent-6
