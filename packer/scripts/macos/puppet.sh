@@ -9,3 +9,4 @@ sudo /opt/puppetlabs/puppet/bin/puppet module install thekevjames-homebrew --ver
 
 # Set locale to address https://tickets.puppetlabs.com/browse/PUP-5042
 echo 'export LANG="en_US.UTF-8"' >> ~/.bash_profile
+echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bash_profile
