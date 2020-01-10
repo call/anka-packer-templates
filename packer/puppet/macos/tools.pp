@@ -1,3 +1,7 @@
+class { 'homebrew':
+  user => 'anka',
+}
+
 package { 'serverspec':
   ensure   => 'present',
   provider => 'gem',
