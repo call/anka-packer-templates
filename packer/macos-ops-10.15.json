@@ -17,6 +17,12 @@
         "scripts/macos/tools.sh"
       ],
       "type": "shell"
+    },
+    {
+      "scripts": [
+        "puppet/macos/test.pp"
+      ],
+      "type": "puppet-masterless"
     }
   ],
   "variables": {
