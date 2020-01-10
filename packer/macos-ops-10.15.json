@@ -14,8 +14,7 @@
   "provisioners": [
     {
       "scripts": [
-        "scripts/macos/homebrew.sh",
-        "scripts/macos/asdf.sh"
+        "scripts/macos/tools.sh",
       ],
       "type": "shell"
     }

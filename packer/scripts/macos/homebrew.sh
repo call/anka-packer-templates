@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set -euo pipefail
 
 # Make Homebrew bin dir first in $PATH
 echo "export PATH=/usr/local/bin:$PATH" >> ~/.bash_profile
