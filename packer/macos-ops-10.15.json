@@ -22,7 +22,10 @@
     {
       "manifest_file": "puppet/macos/tools.pp",
       "type": "puppet-masterless",
-      "puppet_bin_dir": "/opt/puppetlabs/puppet/bin/"
+      "puppet_bin_dir": "/opt/puppetlabs/puppet/bin",
+      "facter": {
+        "LANG": "en_US.UTF-8"
+      }
     }
   ],
   "variables": {
