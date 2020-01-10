@@ -14,7 +14,7 @@
   "provisioners": [
     {
       "scripts": [
-        "scripts/macos/tools.sh",
+        "scripts/macos/tools.sh"
       ],
       "type": "shell"
     }
