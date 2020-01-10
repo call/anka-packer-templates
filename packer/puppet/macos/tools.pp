@@ -1,12 +1,9 @@
-$pkgs = ['autopkgr']
-$gems = ['serverspec']
-
-package { $pkgs:
+package { 'autopkgr':
   ensure   => 'present',
   provider => 'homebrew',
 }
 
-package { $gems:
+package { 'serverspec':
   ensure   => 'present',
   provider => 'gem',
 }
