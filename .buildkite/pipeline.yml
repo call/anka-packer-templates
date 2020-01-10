@@ -5,11 +5,11 @@ steps:
   #     - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer && packer build macos-vanilla-10.15.json; fi"
   #   agents:
   #     - *agent_queue
-  # - label: Build 10.15.2 CI
-  #   command:
-  #     - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer && packer build macos-ci-10.15.json; fi"
-  #   agents:
-  #     - *agent_queue
+  - label: Build 10.15.2 CI
+    command:
+      - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer && packer build macos-ci-10.15.json; fi"
+    agents:
+      - *agent_queue
   - label: Build 10.15.2 Ops
     command:
       - "source ~/.bash_profile"
