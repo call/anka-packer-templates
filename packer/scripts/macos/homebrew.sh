@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # Make Homebrew bin dir first in $PATH
-echo "export PATH=/usr/local/bin:$PATH" >> ~/.bash_profile
 echo "export PATH=/usr/local/bin:$PATH" >> ~/.zshenv
+echo "export PATH=/usr/local/bin:$PATH" >> ~/.bash_profile
 source ~/.bash_profile
 
 # Manually install Xcode CLI tools, it fails sometimes in the Homebrew installer

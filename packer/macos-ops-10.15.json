@@ -22,7 +22,7 @@
       "manifest_file": "puppet/macos/tools.pp",
       "type": "puppet-masterless",
       "puppet_bin_dir": "/opt/puppetlabs/puppet/bin",
-      "execute_command": "cd {{.WorkingDir}} && {{if ne .FacterVars ""}}{{.FacterVars}} {{end}}{{if .Sudo}}sudo -E {{end}}{{if ne .PuppetBinDir ""}}{{.PuppetBinDir}}/{{end}}puppet apply --detailed-exitcodes{{if .Debug}}--debug {{end}}{{if ne .ModulePath ""}}--modulepath='{{.ModulePath}}' {{end}}{{if ne .HieraConfigPath ""}}--hiera_config='{{.HieraConfigPath}}' {{end}}{{if ne .ManifestDir ""}}--manifestdir='{{.ManifestDir}}' {{end}}{{if ne .ExtraArguments ""}}{{.ExtraArguments}} {{end}}{{.ManifestFile}}"
+      "execute_command": "cd {{.WorkingDir}} && LANG=en_US.UTF-8 {{if ne .FacterVars \"\"}}{{.FacterVars}} {{end}}{{if .Sudo}}sudo -E {{end}}{{if ne .PuppetBinDir \"\"}}{{.PuppetBinDir}}/{{end}}puppet apply --detailed-exitcodes {{if .Debug}}--debug {{end}}{{if ne .ModulePath \"\"}}--modulepath='{{.ModulePath}}' {{end}}{{if ne .HieraConfigPath \"\"}}--hiera_config='{{.HieraConfigPath}}' {{end}}{{if ne .ManifestDir \"\"}}--manifestdir='{{.ManifestDir}}' {{end}}{{if ne .ExtraArguments \"\"}}{{.ExtraArguments}} {{end}}{{.ManifestFile}}"
     }
   ],
   "variables": {
