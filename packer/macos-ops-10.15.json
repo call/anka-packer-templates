@@ -19,6 +19,9 @@
       "type": "shell"
     },
     {
+      "environment_vars": [
+        "LANG=en_us.UTF-8"
+      ],
       "manifest_file": "puppet/macos/tools.pp",
       "type": "puppet-masterless",
       "puppet_bin_dir": "/opt/puppetlabs/puppet/bin"
