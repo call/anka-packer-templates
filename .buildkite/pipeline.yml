@@ -15,13 +15,9 @@ steps:
       - "if [[ ! $(anka show macos-ops-10.15) ]]; then cd packer && packer build macos-ops-10.15.json; fi"
     agents:
       - *agent_queue
-  - label: Anka Flow CI Job
+  - label: Anka Flow Ops Job
     command:
-      - "whoami"
-      - "pwd"
-      - "env"
-      - "export PATH=/usr/local/bin:$PATH"
-      - "/usr/local/bin/brew list"
+      - "brew list"
     agents:
       - *agent_queue
     plugins:
