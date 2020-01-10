@@ -12,6 +12,7 @@ steps:
   #     - *agent_queue
   - label: Build 10.15.2 Ops
     command:
+      - "source ~/.bash_profile"
       - "if [[ ! $(anka show macos-ops-10.15) ]]; then cd packer && packer build macos-ops-10.15.json; fi"
     agents:
       - *agent_queue
