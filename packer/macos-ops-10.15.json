@@ -20,7 +20,8 @@
     },
     {
       "manifest_file": "puppet/macos/test.pp",
-      "type": "puppet-masterless"
+      "type": "puppet-masterless",
+      "execute_command": "/opt/puppetlabs/puppet/bin/puppet"
     }
   ],
   "variables": {
