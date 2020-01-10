@@ -4,9 +4,9 @@ exec { 'set_locale' :
   command => "/bin/bash -c \"export LANG=en_us.UTF-8\"",
 }
 
-class { 'homebrew':
-  user => 'anka',
-}
+# class { 'homebrew':
+#   user => 'anka',
+# }
 
 package { 'serverspec':
   ensure   => 'present',
