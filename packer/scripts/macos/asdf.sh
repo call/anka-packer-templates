@@ -10,6 +10,7 @@ git checkout "$(git describe --abbrev=0 --tags)"
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
 
 # Install plugin dependencies
 # https://asdf-vm.com/#/core-manage-asdf-vm?id=plugin-dependencies
