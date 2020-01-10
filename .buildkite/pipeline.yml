@@ -1,10 +1,11 @@
 agent_queue: &agent_queue "queue=iron-shark"
 steps:
-  # - label: Build 10.15.2 Vanilla 
-  #   command: 
-  #     - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer && packer build macos-vanilla-10.15.json; fi"
-  #   agents:
-  #     - *agent_queue
+  - label: Build 10.15.2 Vanilla
+    command:
+      - "source ~/.bash_profile"
+      - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer && packer build macos-vanilla-10.15.json; fi"
+    agents:
+      - *agent_queue
   - label: Build 10.15.2 CI
     command:
       - "source ~/.bash_profile"
