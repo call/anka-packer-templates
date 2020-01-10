@@ -14,6 +14,7 @@
   "provisioners": [
     {
       "scripts": [
+        "scripts/macos/vars.sh",
         "scripts/macos/puppet.sh"
       ],
       "type": "shell"
