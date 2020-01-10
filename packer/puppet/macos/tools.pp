@@ -3,7 +3,7 @@ package { 'serverspec':
   provider => 'gem',
 }
 
-package { 'autopkgr':
-  ensure   => 'present',
-  provider => 'brewcask',
-}
+# package { 'autopkgr':
+#   ensure   => 'present',
+#   provider => 'brewcask',
+# }

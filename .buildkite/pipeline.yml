@@ -18,6 +18,9 @@ steps:
       - *agent_queue
   - label: Anka Flow Ops Job
     command:
+      - locale
+      - "which ruby"
+      - "gem list"
       - "brew list"
     agents:
       - *agent_queue
