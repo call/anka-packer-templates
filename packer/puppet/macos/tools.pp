@@ -29,3 +29,25 @@ vcsrepo { '/opt/tccprofile':
   source   => 'https://github.com/carlashley/tccprofile.git',
   revision => $tccprofile_ref,
 }
+
+# Settings for JSSImporter
+macdefaults { 'jss_url':
+  domain => '/Library/Preferences/com.github.autopkg.plist',
+  key    => 'JSS_URL',
+  type   => 'string',
+  value  => 'https://test.jss.private:8443',
+}
+
+macdefaults { 'jss_api_username':
+  domain => '/Library/Preferences/com.github.autopkg.plist',
+  key    => 'API_USERNAME',
+  type   => 'string',
+  value  => 'apiUser',
+}
+
+macdefaults { 'jss_api_password':
+  domain => '/Library/Preferences/com.github.autopkg.plist',
+  key    => 'API_PASSWORD',
+  type   => 'string',
+  value  => 'apiPassword',
+}
