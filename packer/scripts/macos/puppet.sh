@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
+export HOMEBREW_NO_AUTO_UPDATE=1
 brew tap puppetlabs/puppet
 brew cask install puppet-agent-6
 
