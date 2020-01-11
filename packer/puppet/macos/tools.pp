@@ -9,7 +9,7 @@ package { 'serverspec':
 }
 
 package { 'autopkg':
-  ensure => 'installed',
+  ensure => 'present',
   source => "https://github.com/autopkg/autopkg/releases/download/v${autopkg_version}/autopkg-${autopkg_version}.pkg",
 }
 
@@ -19,7 +19,7 @@ package { 'autopkgr':
 }
 
 package { 'jssimporter':
-  ensure => 'installed',
+  ensure => 'present',
   source => "https://github.com/jssimporter/JSSImporter/releases/download/v${jssimporter_version}/jssimporter-${jssimporter_version}.pkg"
 }
 
