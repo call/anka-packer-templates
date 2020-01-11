@@ -6,3 +6,4 @@ brew cask install puppet-agent-6
 
 # Puppet module installs
 sudo /opt/puppetlabs/puppet/bin/puppet module install thekevjames-homebrew --version 1.8.3
+sudo /opt/puppetlabs/puppet/bin/puppet module install puppetlabs-vcsrepo --version 3.1.0
