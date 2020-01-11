@@ -1,7 +1,7 @@
 $autopkg_version = '1.4.1'
 $jssimporter_version = '1.0.5'
 $serverspec_version = '2.36.0'
-$tccprofile_ref = '487e121275ff98e532e5b44fcbf85d0aca375ed8'
+$tccprofile_git_ref = '487e121275ff98e532e5b44fcbf85d0aca375ed8'
 
 package { 'serverspec':
   ensure   => $serverspec_version,
@@ -27,7 +27,7 @@ vcsrepo { '/opt/tccprofile':
   ensure   => 'present',
   provider => 'git',
   source   => 'https://github.com/carlashley/tccprofile.git',
-  revision => $tccprofile_ref,
+  revision => $tccprofile_git_ref,
 }
 
 $jssimporter_prefs = {

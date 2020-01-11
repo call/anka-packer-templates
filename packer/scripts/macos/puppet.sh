@@ -4,23 +4,18 @@ set -euo pipefail
 HOMEBREW_MODULE_VERSION='1.8.3'
 VCSREPO_MODULE_VERSION='3.1.0'
 MACDEFAULTS_MODULE_GIT_REF='35ca6165d39808aeffe40c89eceb272b5de4da5b'
-PUPPET_DMG_BASENAME='puppet-agent-6.11.1-1.osx10.14'
-PUPPET_DMG_URL="https://downloads.puppet.com/mac/puppet6/10.14/x86_64/${PUPPET_DMG_BASENAME}.dmg"
+PUPPET_AGENT_BASENAME='puppet-agent-6.11.1-1'
+PUPPET_MACOS_MAJOR_VERSION='10.14'
+PUPPET_DMG_URL="https://downloads.puppet.com/mac/puppet6/${PUPPET_MACOS_MAJOR_VERSION}/x86_64/${PUPPET_AGENT_BASENAME}.osx${PUPPET_MACOS_MAJOR_VERSION}.dmg"
 
 # Git clone and puppet package download dir
 WORK_DIR=$(mktemp -d)
 
-# # Install puppet package with Homebrew. 
-# # This is not pin-able, so pinned version of puppet pkg is installed in tools.pp
-# export HOMEBREW_NO_AUTO_UPDATE=1
-# brew tap puppetlabs/puppet
-# brew cask install puppet-agent-6
-
 # Download & install puppet agent
 curl -o "${WORK_DIR}/puppet-agent.dmg" "${PUPPET_DMG_URL}"
 hdiutil attach "${WORK_DIR}/puppet-agent.dmg"
-sudo installer -package "/Volumes/${PUPPET_DMG_BASENAME}/${PUPPET_DMG_BASENAME}.pkg" -target /
-hdiutil detach "/Volumes/${PUPPET_DMG_BASENAME}"
+sudo installer -package "/Volumes/${PUPPET_AGENT_BASENAME}.osx${PUPPET_MACOS_MAJOR_VERSION}/${PUPPET_AGENT_BASENAME}-installer.pkg" -target /
+hdiutil detach "/Volumes/${PUPPET_AGENT_BASENAME}.osx${PUPPET_MACOS_MAJOR_VERSION}"
 
 # Puppet module installs using CLI
 sudo /opt/puppetlabs/puppet/bin/puppet module install thekevjames-homebrew --version "${HOMEBREW_MODULE_VERSION}"
