@@ -19,7 +19,7 @@ WORK_DIR=$(mktemp -d)
 # Download & install puppet agent
 curl -o "${WORK_DIR}/puppet-agent.dmg" "${PUPPET_DMG_URL}"
 hdiutil attach "${WORK_DIR}/puppet-agent.dmg"
-sudo installer -package "/Volumes/${PUPPET_DMG_BASENAME}/${PUPPET_DMG_BASENAME}.pkg"
+sudo installer -package "/Volumes/${PUPPET_DMG_BASENAME}/${PUPPET_DMG_BASENAME}.pkg" -target /
 hdiutil detach "/Volumes/${PUPPET_DMG_BASENAME}"
 
 # Puppet module installs using CLI
