@@ -2,12 +2,6 @@ $autopkg_version = '1.4.1'
 $jssimporter_version = '1.0.5'
 $serverspec_version = '2.36.0'
 $tccprofile_ref = '487e121275ff98e532e5b44fcbf85d0aca375ed8'
-$puppet_pkgdmg_url = 'http://downloads.puppet.com/mac/puppet6/10.14/x86_64/puppet-agent-6.11.1-1.osx10.14.dmg'
-
-package {'puppet_agent':
-  ensure => 'present',
-  source => $puppet_pkgdmg_url,
-}
 
 package { 'serverspec':
   ensure   => $serverspec_version,
