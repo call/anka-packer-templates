@@ -2,9 +2,11 @@
 set -euo pipefail
 
 HOMEBREW_MODULE_VERSION='1.8.3'
-VSCREPO_MODULE_VERSION='3.1.0'
+VCSREPO_MODULE_VERSION='3.1.0'
 MACDEFAULTS_MODULE_GIT_REF='35ca6165d39808aeffe40c89eceb272b5de4da5b'
 
+# Install puppet package with Homebrew. 
+# This is not pin-able, so pinned version of puppet pkg is installed in tools.pp
 export HOMEBREW_NO_AUTO_UPDATE=1
 brew tap puppetlabs/puppet
 brew cask install puppet-agent-6
@@ -19,4 +21,4 @@ WORK_DIR=$(mktemp -d)
 # Puppet module installs using Git, pinned to a ref
 git clone https://github.com/puppetlabs/puppet-macdefaults.git "${WORK_DIR}/macdefaults"
 cd "${WORK_DIR}/macdefaults" && git reset --hard $MACDEFAULTS_MODULE_GIT_REF
-sudo mv $WORK_DIR /etc/puppetlabs/code/modules/macdefaults
+sudo mv "${WORK_DIR}/macdefaults" /etc/puppetlabs/code/modules/macdefaults
